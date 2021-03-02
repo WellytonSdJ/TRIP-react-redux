@@ -22,12 +22,6 @@ Cada dado da store deve ter o seu próprio reducer, por exemplo: o dado "user" t
 
 Actions são responsáveis por requisitar algo para um reducer. Elas devem ser sempre funções puras, dizendo de uma forma leiga, ou seja elas devem APENAS enviar os dados ao reducer, nada além disso. Disparar uma ação apenas levando os dados que você deseja enviar e o reducer vai receber e usar os dados.
 
-## AXIOS
-
-- Axios - `yarn add axios`
-
-Uma vez criado o axios, foi criado a pasta API e dentro foi criado um baseURL
-
 ## Instruções
 
 Para rodar nossa aplicação, precisaremos de dois terminais digite:
