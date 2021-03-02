@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# TRIPS - exercicios com REDUX em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O objetivo desse exercício é criar uma aplicação para agendamento de viagens usando os conceitos do REDUX aplicados em React
 
-## Available Scripts
+## REDUX
 
-In the project directory, you can run:
+Redux é um controlador de estados geral para sua aplicação.
 
-### `yarn start`
+Compartilhar estados entre vários componentes diferentes se torna uma coisa muito fácil quando o utilizamos. O Redux é basicamente divido em 3 partes: **store, reducers e actions.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Store
 
-### `yarn test`
+"store" é o nome dado pelo Facebook para o conjunto de estados da sua aplicação. Vamos pensar na store como um grande centro de informações, que possui disponibilidade para receber e entregar exatamente o que o seu componente requisita (seja uma função, ou uma informação propriamente dita). A store é um objeto JavaScript que possui todos os estados dos seus componentes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Reducers
 
-### `yarn build`
+Cada dado da store deve ter o seu próprio reducer, por exemplo: o dado "user" teria o seu reducer, chamado só para User. Um reducer é encarregado de lidar com todas as ações, como algum componente pedindo para alterar algum dado da store.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Actions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Actions são responsáveis por requisitar algo para um reducer. Elas devem ser sempre funções puras, dizendo de uma forma leiga, ou seja elas devem APENAS enviar os dados ao reducer, nada além disso. Disparar uma ação apenas levando os dados que você deseja enviar e o reducer vai receber e usar os dados.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## AXIOS
 
-### `yarn eject`
+- Axios - `yarn add axios`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Uma vez criado o axios, foi criado a pasta API e dentro foi criado um baseURL
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instruções
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para rodar nossa aplicação, precisaremos de dois terminais digite:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `yarn dev` ou `npm run dev` - para rodar a aplicação em um terminal
+- `yarn serve` ou `npm run serve` - para rodar a api em outro terminal
 
-## Learn More
+Para nossa aplicação foi instalado uma API fake, ou seja, são dados apenas para fins de estudo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Dependencias instaladas:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> > observação importante: como o projeto foi iniciado usando `npx create-react-app` há dependencias não citadas. No entanto como todas podem ser consultadas no arquivo package.json só achei relevante pontuar as que foram acrescentadas além dessa base.
+> > Dito isso essas foram as dependencias instaladas:
 
-### Code Splitting
+- react-router-dom = `yarn add react-router-dom` ou `npm install react-router-dom`
+- Axios - `yarn add axios`
+- Json-server - `yarn add global json-server`
+- react icons - `npm install react-icons --save`
+- redux e react redux- `yarn add redux react-redux`
+- immer - `yarn add immer`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Atalho para instalar tudo:
 
-### Analyzing the Bundle Size
+ao invés de instalar cada dependencia separada, no terminal chamar:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `yarn add react-router-dom axios json-server redux react-redux react-icons immer`
+- `npm install -g json-server` - essa foi separada por estar em escopo global
